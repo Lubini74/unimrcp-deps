@@ -53,7 +53,7 @@ DBD (database abstraction) interface.
 %package mysql
 Group: Development/Libraries
 Summary: APR utility library MySQL DBD driver
-BuildRequires: mysql-devel
+BuildRequires: mariadb-devel
 Requires: apr-util = %{version}-%{release}
 
 %description mysql
@@ -90,15 +90,6 @@ Requires: apr-util = %{version}-%{release}
 This package provides the ODBC driver for the apr-util DBD
 (database abstraction) interface.
 
-%package ldap
-Group: Development/Libraries
-Summary: APR utility library LDAP support
-BuildRequires: openldap-devel
-Requires: apr-util = %{version}-%{release}
-
-%description ldap
-This package provides the LDAP support for the apr-util.
-
 %package openssl
 Group: Development/Libraries
 Summary: APR utility library OpenSSL crypto support
@@ -123,11 +114,8 @@ This package provides crypto support for apr-util based on Mozilla NSS.
 %build
 %configure --with-apr=%{_prefix} \
         --includedir=%{_includedir}/apr-%{apuver} \
-        --with-ldap --without-gdbm \
-        --with-sqlite3 --with-pgsql --with-mysql --with-freetds --with-odbc \
-        --with-berkeley-db \
-        --with-crypto --with-openssl --with-nss \
-        --without-sqlite2
+        --without-gdbm \
+        --with-crypto --with-openssl --with-nss 
 make %{?_smp_mflags} && make dox
 
 %check
@@ -142,7 +130,8 @@ rm -rf $RPM_BUILD_ROOT
 make install DESTDIR=$RPM_BUILD_ROOT
 
 # Documentation
-mv docs/dox/html html
+rm -rf html
+mv -f docs/dox/html html
 
 # Unpackaged files
 rm -f $RPM_BUILD_ROOT%{_libdir}/aprutil.exp
@@ -183,10 +172,6 @@ rm -rf $RPM_BUILD_ROOT
 %files odbc
 %defattr(-,root,root,-)
 %{_libdir}/apr-util-%{apuver}/apr_dbd_odbc*
-
-%files ldap
-%defattr(-,root,root,-)
-%{_libdir}/apr-util-%{apuver}/apr_ldap*
 
 %files openssl
 %defattr(-,root,root,-)

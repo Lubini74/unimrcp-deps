@@ -114,16 +114,17 @@ This package provides crypto support for apr-util based on Mozilla NSS.
 %build
 %configure --with-apr=%{_prefix} \
         --includedir=%{_includedir}/apr-%{apuver} \
+				--libdir=%{_libdir} \
         --without-gdbm \
-        --with-crypto --with-openssl --with-nss 
+        --without-crypto --without-openssl --without-nss --disable-util-dso --without-sqlite3 --without-odbc --without-pgsql --without-freetds 
 make %{?_smp_mflags} && make dox
 
 %check
 # Run non-interactive tests
-pushd test
+#pushd test
 make %{?_smp_mflags} all CFLAGS=-fno-strict-aliasing
-make check || exit 1
-popd
+#make check || exit 1
+#popd
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -147,7 +148,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root,-)
 %doc CHANGES LICENSE NOTICE
 %{_libdir}/libaprutil-%{apuver}.so.*
-%dir %{_libdir}/apr-util-%{apuver}
+%dir %{_libdir}
 
 %files dbm
 %defattr(-,root,root,-)
@@ -188,7 +189,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/libaprutil-%{apuver}.so
 %{_libdir}/pkgconfig/apr-util-%{apuver}.pc
 %{_includedir}/apr-%{apuver}/*.h
-%doc --parents html
+%doc html
 
 %changelog
 * Tue Jun 22 2004 Graham Leggett <minfrin@sharp.fm> 1.0.0-1

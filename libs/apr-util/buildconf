@@ -82,7 +82,7 @@ else
   echo "autoconf failed"
   exit 1
 fi
-
+chmod +x ./configure
 #
 # Generate build-outputs.mk for the build system
 #

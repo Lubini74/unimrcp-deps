@@ -1,6 +1,6 @@
 # Sofia SIP UA Library
 
-Summary: Sofia SIP User-Agent library
+Summary: UniMRCP Sofia SIP User-Agent library
 Name: unisofia-sip
 Version: @VERSION@
 Release: 1%{?dist}
@@ -114,7 +114,7 @@ GLib interface to Sofia SIP User Agent library.
 %endif
 
 %package	devel
-Summary:	Sofia-SIP Development Package
+Summary:	UniMRCP Sofia-SIP Development Package
 Group:		Development/Libraries
 Requires:	unisofia-sip = %{version}-%{release}
 Obsoletes:	sofia-devel < %{version}-%{release}
@@ -180,7 +180,7 @@ HTML reference documentation for Sofia SIP UA library.
 %endif
 
 %package	utils
-Summary:	Sofia-SIP Command Line Utilities
+Summary:	UniMRCP Sofia-SIP Command Line Utilities
 Group:		Applications/Internet
 Requires:	unisofia-sip = %{version}-%{release}
 Obsoletes:	sofia-utils < %{version}-%{release}

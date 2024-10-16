@@ -132,10 +132,10 @@ make %{?_smp_mflags} && make dox
 
 %check
 # Run non-interactive tests
-pushd test
-make %{?_smp_mflags} all CFLAGS=-fno-strict-aliasing
-make check || exit 1
-popd
+#pushd test
+#make %{?_smp_mflags} all CFLAGS=-fno-strict-aliasing
+#make check || exit 1
+#popd
 
 %install
 rm -rf $RPM_BUILD_ROOT

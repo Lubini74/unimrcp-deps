@@ -31,42 +31,42 @@ build applications using the APR utility library.  The mission
 of the Apache Portable Runtime (APR) is to provide a free 
 library of C data structures and routines.
 
-#%package dbm
+#package dbm
 #Group: Development/Libraries 
 #Summary: APR utility library DBM driver
 #BuildRequires: db4-devel
 #Requires: apr-util = %{version}-%{release}
 
-#%description dbm
+#description dbm
 #This package provides the DBM driver for the apr-util.
 
-#%package pgsql
+#package pgsql
 #Group: Development/Libraries
 #Summary: APR utility library PostgreSQL DBD driver
 #BuildRequires: postgresql-devel
 #Requires: apr-util = %{version}-%{release}
 
-#%description pgsql
+#description pgsql
 #This package provides the PostgreSQL driver for the apr-util
 #DBD (database abstraction) interface.
 
-#%package mariadb
+#package mariadb
 #Group: Development/Libraries
 #Summary: APR utility library MySQL DBD driver
 #BuildRequires: mariadb-devel
 #Requires: apr-util = %{version}-%{release}
 
-#%description mariadb
+#description mariadb
 #This package provides the MySQL driver for the apr-util DBD
 #(database abstraction) interface.
 
-#%package sqlite
+#package sqlite
 #Group: Development/Libraries
 #Summary: APR utility library SQLite DBD driver
 #BuildRequires: sqlite-devel >= 3.0.0
 #Requires: apr-util = %{version}-%{release}
 
-#%description sqlite
+#description sqlite
 #This package provides the SQLite driver for the apr-util DBD
 #(database abstraction) interface.
 

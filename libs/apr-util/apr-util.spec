@@ -142,7 +142,7 @@ rm -rf $RPM_BUILD_ROOT
 make install DESTDIR=$RPM_BUILD_ROOT
 
 # Documentation
-mv -f docs/dox/html html
+mv -rf docs/dox/html html
 
 # Unpackaged files
 rm -f $RPM_BUILD_ROOT%{_libdir}/aprutil.exp

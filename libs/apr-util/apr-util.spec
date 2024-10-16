@@ -161,33 +161,33 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/libaprutil-%{apuver}.so.*
 %dir %{_libdir}/apr-util-%{apuver}
 
-%files dbm
-%defattr(-,root,root,-)
-%{_libdir}/apr-util-%{apuver}/apr_dbm_db*
+#files dbm
+#defattr(-,root,root,-)
+#{_libdir}/apr-util-%{apuver}/apr_dbm_db*
 
-%files pgsql
-%defattr(-,root,root,-)
-%{_libdir}/apr-util-%{apuver}/apr_dbd_pgsql*
+#files pgsql
+#defattr(-,root,root,-)
+#{_libdir}/apr-util-%{apuver}/apr_dbd_pgsql*
 
-%files mariadb
-%defattr(-,root,root,-)
-%{_libdir}/apr-util-%{apuver}/apr_dbd_mariadb*
+#files mariadb
+#defattr(-,root,root,-)
+#{_libdir}/apr-util-%{apuver}/apr_dbd_mariadb*
 
-%files sqlite
-%defattr(-,root,root,-)
-%{_libdir}/apr-util-%{apuver}/apr_dbd_sqlite*
+#files sqlite
+#defattr(-,root,root,-)
+#{_libdir}/apr-util-%{apuver}/apr_dbd_sqlite*
 
 %files freetds
 %defattr(-,root,root,-)
 %{_libdir}/apr-util-%{apuver}/apr_dbd_freetds*
 
-%files odbc
-%defattr(-,root,root,-)
-%{_libdir}/apr-util-%{apuver}/apr_dbd_odbc*
+#files odbc
+#defattr(-,root,root,-)
+#{_libdir}/apr-util-%{apuver}/apr_dbd_odbc*
 
-%files ldap
-%defattr(-,root,root,-)
-%{_libdir}/apr-util-%{apuver}/apr_ldap*
+#files ldap
+#defattr(-,root,root,-)
+#{_libdir}/apr-util-%{apuver}/apr_ldap*
 
 %files openssl
 %defattr(-,root,root,-)

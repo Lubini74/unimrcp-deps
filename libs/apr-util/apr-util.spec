@@ -123,11 +123,9 @@ This package provides crypto support for apr-util based on Mozilla NSS.
 %build
 %configure --with-apr=%{_prefix} \
         --includedir=%{_includedir}/apr-%{apuver} \
-        --without-ldap --without-gdbm \
-        --without-sqlite3 --without-pgsql --without-mysql --with-freetds --without-odbc \
-        --without-berkeley-db \
-        --with-crypto --with-openssl --with-nss \
-        --without-sqlite2
+        --with-crypto --with-openssl=/usr/include/openssl --with-nss \
+        --without-ldap --without-gdbm --without-sqlite3 --without-pgsql --without-mysql --with-freetds --without-odbc \
+        --without-berkeley-db --without-sqlite2
 make %{?_smp_mflags} && make dox
 
 %check

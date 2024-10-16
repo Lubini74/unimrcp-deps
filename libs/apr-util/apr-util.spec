@@ -50,13 +50,13 @@ Requires: apr-util = %{version}-%{release}
 This package provides the PostgreSQL driver for the apr-util
 DBD (database abstraction) interface.
 
-%package mysql
+%package mariadb
 Group: Development/Libraries
 Summary: APR utility library MySQL DBD driver
-BuildRequires: mysql-devel
+BuildRequires: mariadb-devel
 Requires: apr-util = %{version}-%{release}
 
-%description mysql
+%description mariadb
 This package provides the MySQL driver for the apr-util DBD
 (database abstraction) interface.
 
@@ -168,9 +168,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root,-)
 %{_libdir}/apr-util-%{apuver}/apr_dbd_pgsql*
 
-%files mysql
+%files mariadb
 %defattr(-,root,root,-)
-%{_libdir}/apr-util-%{apuver}/apr_dbd_mysql*
+%{_libdir}/apr-util-%{apuver}/apr_dbd_mariadb*
 
 %files sqlite
 %defattr(-,root,root,-)

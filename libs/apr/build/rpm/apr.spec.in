@@ -36,7 +36,7 @@ C data structures and routines.
 # regenerate configure script etc.
 ./buildconf
 %configure \
-        --prefix=/usr \
+        --prefix=/opt/unimrcp \
         --includedir=%{_includedir}/apr-%{aprver} \
         --with-installbuilddir=%{_libdir}/apr/build-%{aprver} \
         --with-devrandom=/dev/urandom \

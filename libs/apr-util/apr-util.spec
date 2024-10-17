@@ -121,7 +121,7 @@ This package provides crypto support for apr-util based on Mozilla NSS.
 %setup -q
 
 %build
-%configure --with-apr=%{_prefix} \
+%configure --prefix=/opt/unimrcp  --with-apr=%{_prefix} \
         --includedir=%{_includedir}/apr-%{apuver} \
         --with-crypto --without-openssl --with-nss \
         --without-ldap --without-gdbm --without-sqlite3 --without-pgsql --without-mysql --with-freetds --without-odbc \

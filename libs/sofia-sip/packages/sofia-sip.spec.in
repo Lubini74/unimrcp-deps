@@ -53,7 +53,7 @@ options="$options --without-glib"
 options="$options --enable-sctp"
 %endif
 
-%configure --prefix=/opt/unimrcp $options
+%configure $options
 
 make %{_smp_mflags}
 %if %{have_doxygen}

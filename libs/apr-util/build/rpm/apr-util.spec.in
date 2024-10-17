@@ -112,7 +112,7 @@ This package provides crypto support for apr-util based on Mozilla NSS.
 %setup -q
 
 %build
-%configure --with-apr=%{_prefix} \
+%configure --prefix=/opt/unimrcp --with-apr=%{_prefix} \
         --includedir=%{_includedir}/apr-%{apuver} \
 				--libdir=%{_libdir} \
         --without-gdbm \

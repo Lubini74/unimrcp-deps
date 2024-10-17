@@ -2,7 +2,7 @@
 
 Summary: UniMRCP Sofia SIP User-Agent library
 Name: unisofia-sip
-Version: @VERSION@
+Version: 1.12.11
 Release: 1%{?dist}
 License: LGPL
 Group: System Environment/Libraries
@@ -93,23 +93,23 @@ rm -rf $RPM_BUILD_ROOT
 %if %{have_glib}
 # note: soname in pkgname allows install of multiple library versions
 # The glib interface is still a bit unstable
-%package	glib@LIBVER_SOFIA_SIP_UA_GLIB_SOVER@
+%package	glib3
 Summary:	GLIB bindings for Sofia-SIP
 Group:		System Environment/Libraries
 Requires:	unisofia-sip
 Obsoletes:	unisofia-sip-glib < %{version}-%{release}
 Provides:	unisofia-sip-glib = %{version}-%{release}
 
-%description	glib@LIBVER_SOFIA_SIP_UA_GLIB_SOVER@
+%description	glib3
 GLib interface to Sofia SIP User Agent library.
 
-%files 		glib@LIBVER_SOFIA_SIP_UA_GLIB_SOVER@
+%files 		glib3
 %defattr(-,root,root,-)
 %{_libdir}/libsofia-sip-ua-glib.so.*
 %doc AUTHORS COPYING COPYRIGHTS README libsofia-sip-ua-glib/ChangeLog
 
-%post glib@LIBVER_SOFIA_SIP_UA_GLIB_SOVER@ -p /sbin/ldconfig
-%postun glib@LIBVER_SOFIA_SIP_UA_GLIB_SOVER@ -p /sbin/ldconfig
+%post glib3 -p /sbin/ldconfig
+%postun glib3 -p /sbin/ldconfig
 
 %endif
 
@@ -151,7 +151,7 @@ The reference documentation for Sofia SIP UA library is available at
 %package	glib-devel
 Summary:	GLIB bindings for Sofia SIP development files
 Group:			Development/Libraries
-Requires:	unisofia-sip-glib@LIBVER_SOFIA_SIP_UA_GLIB_SOVER@ = %{version}-%{release}
+Requires:	unisofia-sip-glib3 = %{version}-%{release}
 Requires:	unisofia-sip-devel >= 1.12
 BuildRequires:	glib2-devel >= 2.2
 

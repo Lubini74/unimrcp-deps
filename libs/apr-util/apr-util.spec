@@ -23,7 +23,8 @@ for XML, LDAP, database interfaces, URI parsing and more.
 Group: Development/Libraries
 Summary: APR utility library development kit
 Requires: apr-util = %{version}-%{release}, apr-devel
-Requires: db4-devel, expat-devel
+Requires: expat-devel
+#Requires: db4-devel, expat-devel
 
 %description devel
 This package provides the support files which can be used to 

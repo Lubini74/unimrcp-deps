@@ -54,7 +54,8 @@ rm -rf $RPM_BUILD_ROOT
 make install DESTDIR=$RPM_BUILD_ROOT
 
 # Move docs to more convenient location
-mv docs/dox/html html
+rm -rf html
+mv -f docs/dox/html html
 
 # Unpackaged files:
 rm -f $RPM_BUILD_ROOT%{_libdir}/apr.exp

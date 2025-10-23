@@ -10,7 +10,7 @@ Group: System Environment/Libraries
 URL: http://apr.apache.org/
 Source0: http://www.apache.org/dist/apr/%{name}-%{version}.tar.bz2
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires: autoconf, libtool, doxygen, apr-devel >= 1.4.0
+BuildRequires: autoconf, libtool, doxygen, uniapr-devel >= 1.4.0
 BuildRequires: expat-devel, libuuid-devel
 
 %description

@@ -2,7 +2,7 @@
 %define aprver 1
 
 Summary: Apache Portable Runtime library
-Name: apr
+Name: uniapr
 Version: APR_VERSION
 Release: APR_RELEASE
 License: Apache Software License
@@ -21,7 +21,7 @@ including Unices, MS Win32, BeOS and OS/2.
 %package devel
 Group: Development/Libraries
 Summary: APR library development kit
-Requires: apr = %{version}
+Requires: uniapr = %{version}
 
 %description devel
 This package provides the support files which can be used to 

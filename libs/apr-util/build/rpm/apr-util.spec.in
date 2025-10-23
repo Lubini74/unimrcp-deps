@@ -2,7 +2,7 @@
 %define apuver 1
 
 Summary: Apache Portable Runtime Utility library
-Name: apr-util
+Name: uniapr-util
 Version: APU_VERSION
 Release: APU_RELEASE
 License: Apache Software License
@@ -22,7 +22,7 @@ for XML, LDAP, database interfaces, URI parsing and more.
 %package devel
 Group: Development/Libraries
 Summary: APR utility library development kit
-Requires: apr-util = %{version}-%{release}, apr-devel
+Requires: uniapr-util = %{version}-%{release}, uniapr-devel
 Requires: expat-devel
 #Requires: db4-devel, expat-devel
 
@@ -36,78 +36,78 @@ library of C data structures and routines.
 #Group: Development/Libraries 
 #Summary: APR utility library DBM driver
 #BuildRequires: db4-devel
-#Requires: apr-util = %{version}-%{release}
+#Requires: uniapr-util = %{version}-%{release}
 
 %description dbm
-This package provides the DBM driver for the apr-util.
+This package provides the DBM driver for the uniapr-util.
 
 %package pgsql
 Group: Development/Libraries
 Summary: APR utility library PostgreSQL DBD driver
 BuildRequires: postgresql-devel
-Requires: apr-util = %{version}-%{release}
+Requires: uniapr-util = %{version}-%{release}
 
 %description pgsql
-This package provides the PostgreSQL driver for the apr-util
+This package provides the PostgreSQL driver for the uniapr-util
 DBD (database abstraction) interface.
 
 %package mariadb
 Group: Development/Libraries
 Summary: APR utility library mariadb DBD driver
 BuildRequires: mariadb-devel
-Requires: apr-util = %{version}-%{release}
+Requires: uniapr-util = %{version}-%{release}
 
 %description mariadb
-This package provides the mariadb driver for the apr-util DBD
+This package provides the mariadb driver for the uniapr-util DBD
 (database abstraction) interface.
 
 %package sqlite
 Group: Development/Libraries
 Summary: APR utility library SQLite DBD driver
 BuildRequires: sqlite-devel >= 3.0.0
-Requires: apr-util = %{version}-%{release}
+Requires: uniapr-util = %{version}-%{release}
 
 %description sqlite
-This package provides the SQLite driver for the apr-util DBD
+This package provides the SQLite driver for the uniapr-util DBD
 (database abstraction) interface.
 
 %package freetds
 Group: Development/Libraries
 Summary: APR utility library FreeTDS DBD driver
 BuildRequires: freetds-devel
-Requires: apr-util = %{version}-%{release}
+Requires: uniapr-util = %{version}-%{release}
 
 %description freetds
-This package provides the FreeTDS driver for the apr-util DBD
+This package provides the FreeTDS driver for the uniapr-util DBD
 (database abstraction) interface.
 
 %package odbc
 Group: Development/Libraries
 Summary: APR utility library ODBC DBD driver
 BuildRequires: unixODBC-devel
-Requires: apr-util = %{version}-%{release}
+Requires: uniapr-util = %{version}-%{release}
 
 %description odbc
-This package provides the ODBC driver for the apr-util DBD
+This package provides the ODBC driver for the uniapr-util DBD
 (database abstraction) interface.
 
 %package openssl
 Group: Development/Libraries
 Summary: APR utility library OpenSSL crypto support
 BuildRequires: openssl-devel
-Requires: apr-util = %{version}-%{release}
+Requires: uniapr-util = %{version}-%{release}
 
 %description openssl
-This package provides crypto support for apr-util based on OpenSSL.
+This package provides crypto support for uniapr-util based on OpenSSL.
 
 %package nss
 Group: Development/Libraries
 Summary: APR utility library NSS crypto support
 BuildRequires: nss-devel
-Requires: apr-util = %{version}-%{release}
+Requires: uniapr-util = %{version}-%{release}
 
 %description nss
-This package provides crypto support for apr-util based on Mozilla NSS.
+This package provides crypto support for uniapr-util based on Mozilla NSS.
 
 %prep
 %setup -q

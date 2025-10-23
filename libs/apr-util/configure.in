@@ -90,7 +90,7 @@ AC_SUBST(AR_FLAGS, [cr])
 
 dnl Enable the layout handling code, then reparse the prefix-style
 dnl arguments due to autoconf being a PITA.
-APR_ENABLE_LAYOUT(apr-util)
+APR_ENABLE_LAYOUT(uniapr-util)
 APR_PARSE_ARGUMENTS
 
 dnl load os-specific hints for apr-util

@@ -10,7 +10,7 @@
 ##
 
 #   Classical APR-util path layout designed for parallel installs.
-<Layout apr-util>
+<Layout uniapr-util>
     prefix:        /usr/local/apr
     exec_prefix:   ${prefix}
     bindir:        ${exec_prefix}/bin

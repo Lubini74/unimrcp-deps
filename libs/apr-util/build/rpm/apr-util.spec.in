@@ -32,11 +32,13 @@ build applications using the APR utility library.  The mission
 of the Apache Portable Runtime (APR) is to provide a free 
 library of C data structures and routines.
 
-#%package dbm
-#Group: Development/Libraries 
-#Summary: APR utility library DBM driver
-#BuildRequires: db4-devel
-#Requires: uniapr-util = %{version}-%{release}
+%global not_used_for_mrcp 0
+%if %{not_used_for_mrcp}
+%package dbm
+Group: Development/Libraries 
+Summary: APR utility library DBM driver
+BuildRequires: db4-devel
+Requires: uniapr-util = %{version}-%{release}
 
 %description dbm
 This package provides the DBM driver for the uniapr-util.
@@ -108,6 +110,7 @@ Requires: uniapr-util = %{version}-%{release}
 
 %description nss
 This package provides crypto support for uniapr-util based on Mozilla NSS.
+%endif
 
 %prep
 %setup -q
@@ -151,6 +154,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/libaprutil-%{apuver}.so.*
 %dir %{_libdir}
 
+%if %{not_used_for_mrcp}
 %files dbm
 %defattr(-,root,root,-)
 %{_libdir}/apr-util-%{apuver}/apr_dbm_db*
@@ -182,6 +186,7 @@ rm -rf $RPM_BUILD_ROOT
 %files nss
 %defattr(-,root,root,-)
 %{_libdir}/apr-util-%{apuver}/apr_crypto_nss*
+%endif
 
 %files devel
 %defattr(-,root,root,-)

@@ -7,7 +7,7 @@ includedir=@includedir@
 Name: APR Utils
 Description: Companion library for APR
 Version: @APRUTIL_DOTTED_VERSION@
-# assume that apr-util requires libapr of same major version
-Requires: apr-@APRUTIL_MAJOR_VERSION@
+# assume that uniapr-util requires libapr of same major version
+Requires: uniapr-@APRUTIL_MAJOR_VERSION@
 Libs: -L${libdir} -l@APRUTIL_LIBNAME@ @LDADD_ldap@ @APRUTIL_EXPORT_LIBS@
 Cflags: -I${includedir}

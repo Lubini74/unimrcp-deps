@@ -83,7 +83,7 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_libdir}/apr
 %dir %{_libdir}/apr/build-%{aprver}
 %{_libdir}/apr/build-%{aprver}/*
-%{_libdir}/pkgconfig/apr-%{aprver}.pc
+%{_libdir}/pkgconfig/uniapr-%{aprver}.pc
 %dir %{_includedir}/apr-%{aprver}
 %{_includedir}/apr-%{aprver}/*.h
 

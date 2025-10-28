@@ -27,7 +27,7 @@ CLEAN_SUBDIRS= test
 INSTALL_SUBDIRS=@INSTALL_SUBDIRS@
 
 TARGET_LIB = lib@APR_LIBNAME@.la
-APR_PCFILE = apr-$(APR_MAJOR_VERSION).pc
+APR_PCFILE = uniapr-$(APR_MAJOR_VERSION).pc
 APR_CONFIG = apr-$(APR_MAJOR_VERSION)-config
 INSTALL = @INSTALL@
 INSTALL_DATA = @INSTALL_DATA@
@@ -49,7 +49,7 @@ CLEAN_TARGETS = apr-config.out apr.exp exports.c export_vars.c .make.dirs \
 	tools/gen_test_char.o tools/gen_test_char.lo
 DISTCLEAN_TARGETS = config.cache config.log config.status \
 	include/apr.h include/arch/unix/apr_private.h \
-	libtool $(APR_CONFIG) build/apr_rules.mk apr.pc \
+	libtool $(APR_CONFIG) build/apr_rules.mk uniapr.pc \
 	build/pkg/pkginfo
 EXTRACLEAN_TARGETS = configure aclocal.m4 include/arch/unix/apr_private.h.in \
 	build-outputs.mk build/ltcf-c.sh build/aclocal.m4 \
@@ -81,7 +81,7 @@ install: $(TARGETS)
 	done
 	$(LIBTOOL) --mode=install $(INSTALL) -m 755 $(TARGET_LIB) $(DESTDIR)$(libdir)
 	$(INSTALL_DATA) apr.exp $(DESTDIR)$(libdir)/apr.exp
-	$(INSTALL_DATA) apr.pc $(DESTDIR)$(libdir)/pkgconfig/$(APR_PCFILE)
+	$(INSTALL_DATA) uniapr.pc $(DESTDIR)$(libdir)/pkgconfig/$(APR_PCFILE)
 	for f in libtool shlibtool; do \
 	    if test -f $${f}; then $(INSTALL) -m 755 $${f} $(DESTDIR)$(installbuilddir); fi; \
 	done

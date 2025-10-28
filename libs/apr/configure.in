@@ -2831,7 +2831,7 @@ AC_CONFIG_FILES([Makefile
                  build/apr_rules.mk
                  build/pkg/pkginfo
                  apr-$APR_MAJOR_VERSION-config:apr-config.in
-                 apr.pc])
+                 uniapr.pc])
 
 if test -d $srcdir/test; then
    AC_CONFIG_FILES([test/Makefile test/internal/Makefile])
